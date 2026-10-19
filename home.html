@@ -1,0 +1,63 @@
+<<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body{
+                font-family:Arial,sans-serif;
+                margin:40px;
+                background-color:#f4f7f6;
+                color:#333;
+            }
+            .card{
+                background:white;
+                padding:25px;
+                border-radius:10px;
+                box-shadow:0 4px 8px rgba(0,0,0,0,1);
+                max-width:600px;
+                margin:auto;
+            }
+            h1{
+                color:#555;
+                margin-bottom:5px;
+            }
+            h3{
+                color:#555;
+            }
+            ul{
+                line-height:1.8;
+            }
+            .badge{
+                background:#28a745;
+                color:white;
+                padding:4px 8px;
+                border-radius:4px;
+                font-size:14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <h1>{{ name }}</h1>
+            <h3>{{ degree }}</h3>
+            <p><strong>College:</strong>{{ college }}</p>
+            <hr>
+            <ul>
+                {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for cert in certification %}
+                    <li><span class="badge">Verification</span>{{ cert }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
